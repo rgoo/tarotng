@@ -1,10 +1,9 @@
 <?php 
 
 /**
- * Add you db credentials
+ * Add your db credentials
  * 
  */
-
 
 $host = "localhost";
 $db   = "";
