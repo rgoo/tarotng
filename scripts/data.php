@@ -5,12 +5,22 @@ require_once 'config.php';
 
 class Database 
 {
-    public static $connection;
+    private static $connection;
 
     private $dbName = null, $dbHost = null, $dbPass = null, $dbUser = null;
 
+    public static function connect($dbDetails = array()){
+        if (!isset(self::$connection)) {
+            self::$connection = new self($dbDetails);
+        } 
+        
+        return self::$connection;
+    }
+
+    // private constructor   
     private function __construct($dbDetails = array())
     {
+        // $dbDetails array from config.php
         $this->dbName = $dbDetails['db_name'];
         $this->dbHost = $dbDetails['db_host'];
         $this->dbUser = $dbDetails['db_user'];
@@ -43,13 +53,7 @@ class Database
         $dbh = null;
     }
 
-    public static function connect($dbDetails = array()){
-        if (!isset(self::$connection)) {
-            self::$connection = new Database($dbDetails);
-        } 
-        
-        return self::$connection;
-    }
+
 
 }
 
