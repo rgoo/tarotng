@@ -5,7 +5,7 @@
  * 
  */ 
 $dbDetails = array(
-        'db_name' => '',
+        'db_name' => 'js_study_2015_ng_tarot',
         'db_host' => 'localhost',
         'db_user' => 'root',
         'db_pass' => 'root'

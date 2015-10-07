@@ -23,7 +23,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'views/about.html',
             controller: 'deckCtrl'
 
-        })
+        }).state('search', {
+        url: '/search',
+        templateUrl: 'views/search.html',
+        controller: 'searchCtrl'
+
+    })
         
         
     });
@@ -63,3 +68,14 @@ app.controller('deckCtrl', ['$scope', '$http',
     });
     
   }]);
+
+app.controller('searchCtrl', ['$scope', '$http',
+  function ($scope, $http) {
+    $http.get('scripts/data.php').success(function(data) {
+      $scope.cards = data;
+      $scope.query = "";
+
+  });
+    
+}]);
+
