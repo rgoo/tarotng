@@ -3,9 +3,6 @@
 
 require_once 'config.php';
 
-/**
-* DB
-*/
 class Database 
 {
 
@@ -58,10 +55,5 @@ class Database
 }
 
 $DB =  Database::connect($dbDetails);
-
-
-// $test = Database::connect();
-// echo $test;
-
 
 ?>
