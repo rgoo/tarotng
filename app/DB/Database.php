@@ -6,7 +6,7 @@ require_once 'config.php';
 class Database 
 {
     private static $instance;
-    private $dbName = null, $dbHost = null, $dbPass = null, $dbUser = null;
+    private $dbName, $dbHost, $dbPass, $dbUser;
     private $dbh; 
 
     public static function get_instance($dbDetails = array()){
