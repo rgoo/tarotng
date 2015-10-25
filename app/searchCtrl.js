@@ -8,7 +8,8 @@
 
     function SearchCtrl($http){
     	var vm = this;
-    	$http.get('scripts/data.php').success(function(data) {
+    	$http.get('app/DB/Database.php').success(function(data) {
+          vm.test = "working";
 	      vm.cards = data;
 	      vm.query = "";
   		});

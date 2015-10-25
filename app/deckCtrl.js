@@ -4,13 +4,12 @@
 
 	angular
 	.module('tarotApp')
-    //todo: update directive to use Deckctrl not deckCtrl
     .controller('DeckCtrl', DeckCtrl);
 
     function DeckCtrl($http) {
     	var vm = this;
 
-    	$http.get('scripts/DB/Database.php').success(function(data) {
+    	$http.get('app/DB/Database.php').success(function(data) {
     		vm.cards = data;
 
     		var reading = pick3();

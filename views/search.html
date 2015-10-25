@@ -9,10 +9,11 @@
       <!--Body content-->
 
       <ul class="listings">
-        <li ng-repeat="card in cards | filter:query">
+        <li ng-repeat="card in search.cards | filter:query">
           {{card.name}}
           <p>{{card.suit}}</p>
         </li>
+
       </ul>
 
     </div>

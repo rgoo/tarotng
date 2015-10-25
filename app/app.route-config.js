@@ -14,7 +14,7 @@
 			.state('reading', {
 				url: '/reading',
 				templateUrl: 'views/readings.html',
-				controller: 'deckCtrl'
+				controller: 'DeckCtrl as deck'
 			})
 			.state('home', {
 				url: '/home',
@@ -27,7 +27,7 @@
 			.state('search', {
 				url: '/search',
 				templateUrl: 'views/search.html',
-				controller: 'searchCtrl'
+				controller: 'SearchCtrl as search'
 
 			})
 	}	
