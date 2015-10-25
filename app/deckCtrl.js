@@ -3,16 +3,18 @@
 	'use strict';
 
 	angular
-	.module('app')
+	.module('tarotApp')
     //todo: update directive to use Deckctrl not deckCtrl
     .controller('DeckCtrl', DeckCtrl);
 
-    function DeckCtrl($scope, $http) {
-    	$http.get('scripts/data.php').success(function(data) {
-    		$scope.cards = data;
+    function DeckCtrl($http) {
+    	var vm = this;
+
+    	$http.get('scripts/DB/Database.php').success(function(data) {
+    		vm.cards = data;
 
     		var reading = pick3();
-    		$scope.reading = {'past': reading[0], 'present': reading[1], 'future': reading[2]};
+    		vm.reading = {'past': reading[0], 'present': reading[1], 'future': reading[2]};
 
     		function pick3(){
     			var selections = [];
@@ -20,12 +22,12 @@
 
     			for (var i = 0; i < 3; i++){
 						// assigns a random card to tmp
-						tmp = $scope.cards[Math.floor(Math.random() * $scope.cards.length)];
+						tmp = vm.cards[Math.floor(Math.random() * vm.cards.length)];
 
 						// if the tmp card has already been chosen and is in the selections array,
 						// assign a new random card to tmp
 						while (selections.indexOf(tmp) >= 0){
-							tmp = $scope.cards[Math.floor(Math.random() * $scope.cards.length)];
+							tmp = vm.cards[Math.floor(Math.random() * vm.cards.length)];
 						}
 
 						// assigns the unique card to the selections array 

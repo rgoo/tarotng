@@ -1,0 +1,3 @@
+add bower compontents
+	* angular ui
+	* bootstrap
