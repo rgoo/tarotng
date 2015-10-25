@@ -1,0 +1,22 @@
+{
+  "name": "tarotng",
+  "version": "0.0.0",
+  "homepage": "https://github.com/rgoo/tarotng",
+  "authors": [
+    "rgoo <richardsgit@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.15"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
