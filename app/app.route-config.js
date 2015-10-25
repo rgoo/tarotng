@@ -13,20 +13,20 @@
 			
 			.state('reading', {
 				url: '/reading',
-				templateUrl: 'views/readings.html',
+				templateUrl: 'app/views/readings.html',
 				controller: 'DeckCtrl as deck'
 			})
 			.state('home', {
 				url: '/home',
-				templateUrl: 'views/home.html'
+				templateUrl: 'app/views/home.html'
 			})
 			.state('about', {
 				url: '/about',
-				templateUrl: 'views/about.html'
+				templateUrl: 'app/views/about.html'
 			})
 			.state('search', {
 				url: '/search',
-				templateUrl: 'views/search.html',
+				templateUrl: 'app/views/search.html',
 				controller: 'SearchCtrl as search'
 
 			})
